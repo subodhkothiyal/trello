@@ -12,8 +12,8 @@ function App() {
   }
   return ( 
     <>
-    {Count.map(() => (
-        <NewList />
+    {Count.map((item:string,i: React.Key | null | undefined) => (
+        <div key={i}>{item}</div>
       ))}  
      {/* {Count.map((NewList : any) => ( <NewList /> ))}  */}
       <button onClick={addList}>+ Add</button>
